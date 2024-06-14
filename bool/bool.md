@@ -48,7 +48,7 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 | false | true  | true   |
 | false | false | false  |
 
-### 1.1.4.5. Equal To
+### 1.1.4.5. Equality
 
 | a     | b     | a == b |
 |-------|-------|--------|
@@ -97,20 +97,20 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 ### 2.1.1. Boolean Literal Expressions <a name="2.1.1."></a>
 
 
-#### Syntax
+### Syntax
    <a name="boolean-literal-syntax"></a>
     
     BooleanLiteral ::= 
         true 
       | false 
 
-#### Description
+### Description
 A boolean literal denotes the truth values in logic and Boolean algebra.
 
-#### Compilation
+### Compilation
 2.1.1.1. The type of a boolean literal is [bool](#1.1.).
 
-#### Examples
+### Examples
 `
   true
 ` \
@@ -118,7 +118,7 @@ A boolean literal denotes the truth values in logic and Boolean algebra.
   false
 `
 
-#### References
+### References
 [Bool Types](#1.1.) \
 [Lazy Boolean Expressions](#2.2.1.)
 
@@ -131,7 +131,7 @@ A boolean literal denotes the truth values in logic and Boolean algebra.
 ### 2.2. Operator Expressions
 ### 2.2.1. Lazy Boolean Expressions <a name="2.2.1."></a>
 
-#### Syntax
+### Syntax
    <a name="lazy-boolean-expression-syntax"></a>
 
     LazyBooleanExpression ::= 
@@ -145,12 +145,12 @@ A boolean literal denotes the truth values in logic and Boolean algebra.
         LeftOperand || RightOperand
 
 
-#### Description
+### Description
 The operators || and && apply to operands of [boolean type](#1.1.). The || operator represents logical 'or', and the && operator represents logical 'and'. They differ from | and & in that they only evaluate the right-hand operand if necessary. Specifically, || evaluates the right operand only if the left is false, and && evaluates it only if the left is true. Thus, a lazy boolean expression performs short-circuit Boolean evaluation.
 
 
 
-#### Compilation
+### Compilation
 2.2.1.1. A lazy AND expression uses short-circuit AND logic. \
 2.2.1.2. A lazy OR expression uses short-circuit OR logic. \
 2.2.1.3. The operands of a lazy boolean expression must be of [bool type](#1.1.). \
@@ -158,7 +158,7 @@ The operators || and && apply to operands of [boolean type](#1.1.). The || opera
 
 
 
-#### Runtime
+### Runtime
 2.2.1.5. The evaluation of a lazy AND expression: \
 The left operand is evaluated first. 
 - If the left operand is true, the right operand is evaluated and returned as the value of the lazy AND expression.
@@ -168,12 +168,12 @@ The left operand is evaluated first.
 - If the left operand is false, the right operand is evaluated and returned as the value of the lazy OR expression.
 - If the left operand is true, the expression evaluates to true.
 
-#### Examples
+### Examples
 ```
   let x = false || true; // true 
   let y = false && panic!(); // false, doesn't evaluate `panic!()` 
 ```
 
-#### References
+### References
 [Bool Types](#1.1.) \
 [Boolean Literal Expressions](#2.1.1.) 
