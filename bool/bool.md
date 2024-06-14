@@ -162,7 +162,7 @@ The operators || and && apply to operands of [boolean type](#1.1.). The || opera
 2.2.1.5. The evaluation of a lazy AND expression: \
 The left operand is evaluated first. 
 - If the left operand is true, the right operand is evaluated and returned as the value of the lazy AND expression.
-- If the left operand is false, the expression evaluates to false.
+- If the left operand is false, the expression evaluates to false. \
 2.2.1.6. The evaluation of a lazy OR expression: \
 The left operand is evaluated first. 
 - If the left operand is false, the right operand is evaluated and returned as the value of the lazy OR expression.
