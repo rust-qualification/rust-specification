@@ -2,14 +2,12 @@
 ## 1.1. Bool Types <a name="1.1."></a>
 ### Description
 
-The boolean type, or bool, is a basic data type that represents truth values in logic and Boolean algebra. It is commonly used in various expressions, such as:
-- Conditions in if and while expressions.
-- Operands in [lazy boolean](#2.2.1.) operator expressions. 
+The boolean type, or bool, is a basic data type that represents truth values in logic and Boolean algebra. Boolean values are mainly used in conditionals, in if and while expressions.
 
 ### Legality Rules
 - 1.1.1. The boolean value false has a bit pattern of 0x00, while true has a bit pattern of 0x01.
 - 1.1.2. The size and alignment of a bool are both 1 byte.
-- 1.1.3. A bool is always initialized to a valid value (meaning transmute::<bool, u8>(...) is always valid, but not the reverse as some bit patterns are invalid for bools).
+- 1.1.3. True is transmuted to 1 and false is transmuted to 0. 
 - 1.1.4. The following operations are defined for bool:
 
 ### 1.1.4.1. Logical NOT 
@@ -75,13 +73,13 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 
 
 ### Undefined Behavior
-1.1.5. It is undefined behavior for a boolean variable to have any bit pattern other than 0x00 or 0x01.
+1.1.5. It is undefined behavior for a boolean variable to have any bit pattern other than 0x00 or 0x01. Transmuting a 'u8' to a 'bool' can lead to such invalid boolean values.
 
 
 ### Examples
 `
-  let x: bool = false;
-  let y: bool = true;
+  let x: bool = false;  // explicit type declaration
+  let y = true;
 `
 ```
   if x & y {
@@ -94,7 +92,9 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 ### References
 [Boolean Literal Expressions](#2.1.1.) \
 [Lazy Boolean Expressions](#2.2.1.) \
-Type Cast Expressions
+Type Cast Expressions \
+If Expressions \
+While Loops Expressions 
 
 
 # 2. Expressions
