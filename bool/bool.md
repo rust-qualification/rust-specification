@@ -6,7 +6,7 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 - Conditions in if and while expressions.
 - Operands in [lazy boolean](#2.2.1.) operator expressions. 
 
-### Compilation
+### Legality Rules
 - 1.1.1. The boolean value false has a bit pattern of 0x00, while true has a bit pattern of 0x01.
 - 1.1.2. The size and alignment of a bool are both 1 byte.
 - 1.1.3. A bool is always initialized to a valid value (meaning transmute::<bool, u8>(...) is always valid, but not the reverse as some bit patterns are invalid for bools).
@@ -74,9 +74,6 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 
 
 
-### Runtime
-
-
 ### Undefined Behavior
 1.1.5. It is undefined behavior for a boolean variable to have any bit pattern other than 0x00 or 0x01.
 
@@ -84,12 +81,20 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 ### Examples
 `
   let x: bool = false;
+  let y: bool = true;
 `
+```
+  if x & y {
+    println!("they are both true");
+  } else {
+    println!("they are not both true");
+  }
+```
 
 ### References
 [Boolean Literal Expressions](#2.1.1.) \
-[Lazy Boolean Expressions](#2.2.1.)
-
+[Lazy Boolean Expressions](#2.2.1.) \
+Type Cast Expressions
 
 
 # 2. Expressions
@@ -105,9 +110,9 @@ The boolean type, or bool, is a basic data type that represents truth values in 
       | false 
 
 ### Description
-A boolean literal denotes the truth values in logic and Boolean algebra.
+A boolean literal represents the truth values in logic and Boolean algebra.
 
-### Compilation
+### Legality Rules
 2.1.1.1. The type of a boolean literal is [bool](#1.1.).
 
 ### Examples
@@ -120,10 +125,8 @@ A boolean literal denotes the truth values in logic and Boolean algebra.
 
 ### References
 [Bool Types](#1.1.) \
-[Lazy Boolean Expressions](#2.2.1.)
-
-
-
+[Lazy Boolean Expressions](#2.2.1.) \
+Type Cast Expressions
 
 
 
@@ -146,23 +149,23 @@ A boolean literal denotes the truth values in logic and Boolean algebra.
 
 
 ### Description
-The operators || and && apply to operands of [boolean type](#1.1.). The || operator represents logical 'or', and the && operator represents logical 'and'. They differ from | and & in that they only evaluate the right-hand operand if necessary. Specifically, || evaluates the right operand only if the left is false, and && evaluates it only if the left is true. Thus, a lazy boolean expression performs short-circuit Boolean evaluation.
+The operators || and && represent logical 'or' and logical 'and', between operands of [boolean type](#1.1.). They differ from | and & because they only evaluate the right-hand operand if necessary. Specifically, || evaluates the right operand only if the left is false, and && evaluates the right operand only if the left is true. Thus, a lazy boolean expression performs short-circuit Boolean evaluation.
+
+
+### Legality Rules
+2.2.1.1. The operands of a lazy boolean expression must be of [bool type](#1.1.). \
+2.2.1.2. The type of a lazy boolean expression is [bool](#1.1.). \
+2.2.1.3. A lazy AND expression uses short-circuit AND logic. \
+2.2.1.4. A lazy OR expression uses short-circuit OR logic. 
 
 
 
-### Compilation
-2.2.1.1. A lazy AND expression uses short-circuit AND logic. \
-2.2.1.2. A lazy OR expression uses short-circuit OR logic. \
-2.2.1.3. The operands of a lazy boolean expression must be of [bool type](#1.1.). \
-2.2.1.4. The type of a lazy boolean expression is [bool](#1.1.).
-
-
-
-### Runtime
+### Runtime Semantics
 2.2.1.5. The evaluation of a lazy AND expression: \
 The left operand is evaluated first. 
 - If the left operand is true, the right operand is evaluated and returned as the value of the lazy AND expression.
-- If the left operand is false, the expression evaluates to false. \
+- If the left operand is false, the expression evaluates to false. 
+
 2.2.1.6. The evaluation of a lazy OR expression: \
 The left operand is evaluated first. 
 - If the left operand is false, the right operand is evaluated and returned as the value of the lazy OR expression.
