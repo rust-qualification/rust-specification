@@ -73,7 +73,7 @@ The boolean type, or bool, is a basic data type that represents truth values in 
 
 
 ### Undefined Behavior
-1.1.5. It is undefined behavior for a boolean variable to have any bit pattern other than 0x00 or 0x01. Transmuting a 'u8' to a 'bool' can lead to such invalid boolean values.
+It is undefined behavior for a boolean variable to have any bit pattern other than 0x00 or 0x01. Transmuting a 'u8' to a 'bool' can lead to such invalid boolean values.
 
 
 ### Examples
@@ -142,10 +142,10 @@ Type Cast Expressions
       | LazyOrExpression
 
     LazyAndExpression ::= 
-        LeftOperand && RightOperand
+        BooleanExpression && BooleanExpression
 
     LazyOrExpression ::= 
-        LeftOperand || RightOperand
+        BooleanExpression || BooleanExpression
 
 
 ### Description
@@ -157,8 +157,6 @@ The operators || and && represent logical 'or' and logical 'and', between operan
 2.2.1.2. The type of a lazy boolean expression is [bool](#1.1.). \
 2.2.1.3. A lazy AND expression uses short-circuit AND logic. \
 2.2.1.4. A lazy OR expression uses short-circuit OR logic. 
-
-
 
 ### Runtime Semantics
 2.2.1.5. The evaluation of a lazy AND expression: \
