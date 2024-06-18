@@ -186,13 +186,13 @@ There are the following types of initializers:
 
 - For each field of the constructee, the struct expression shall either:
 
-    - Contain at most one matched named initializer, or
+    - 2.3.6.1. Contain at most one matched named initializer, or
 
-    - Contain at most one matched shorthand initializer, or
+    - 2.3.6.2. Contain at most one matched shorthand initializer, or
 
-    - Have exactly one base initializer.
+    - 2.3.6.2. Have exactly one base initializer.
 
-- A base initializer is allowed even if all fields of the constructee have been matched.
+- 2.3.6.3. A base initializer is allowed even if all fields of the constructee have been matched.
 
 
 
@@ -200,24 +200,24 @@ There are the following types of initializers:
 
 - For each field of the constructee, the struct expression shall either:
 
-    - Contain at most one matched indexed initializer, or
+    - 2.3.7.1. Contain at most one matched indexed initializer, or
 
-    - Have exactly one base initializer.
+    - 2.3.7.2. Have exactly one base initializer.
 
-- A base initializer is allowed even if all fields of the constructee have been matched.
+- 2.3.7.3. A base initializer is allowed even if all fields of the constructee have been matched.
 
 
 
 
 2.3.8. If the constructee is a union type, then
 
-- The struct expression shall not contain a base initializer.
+- 2.3.8.1. The struct expression shall not contain a base initializer.
 
 - For the single field of the constructee, the struct expression shall either:
 
-    - Contain exactly one matched named initializer, or
+    - 2.3.8.2. Contain exactly one matched named initializer, or
 
-    - Contain exactly one matched shorthand initializer.
+    - 2.3.8.3. Contain exactly one matched shorthand initializer.
 
 
 
