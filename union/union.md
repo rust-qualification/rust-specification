@@ -153,39 +153,36 @@ A struct expression constructs a value of a struct, enum, or union. It consists 
 
 2.3.1. The type of a struct expression is the type of the constructee.
 
-2.3.2. The value of a struct expression is the constructed enum value, struct value, or union value.
-
-
 There are the following types of initializers:
-- 2.3.3. Base initializer:
+- 2.3.2. Base initializer:
 
-    - 2.3.3.1. A base initializer specifies an enum value, a struct value, or a union value as a base for construction in a struct expression. Its fields fill unmatched fields in the constructee.
+    - 2.3.2.1. A base initializer specifies an enum value, a struct value, or a union value as a base for construction in a struct expression. Its fields fill unmatched fields in the constructee.
 
-    - 2.3.3.2. A base initializer has the type of its operand, which shall be the same as the type of the constructee.
-
-
-- 2.3.4. Indexed initializer:
-
-    - 2.3.4.1. An indexed initializer specifies the index and initial value of a field in a struct expression. An indexed initializer matches a field of the constructee based on its index.
-
-    - 2.3.4.2. The type of the operand of an indexed initializer and the type of the matched field shall be compatible.
+    - 2.3.2.2. A base initializer has the type of its operand, which shall be the same as the type of the constructee.
 
 
-- 2.3.5. Named initializer:
+- 2.3.3. Indexed initializer:
 
-    - 2.3.5.1. A named initializer specifies the name and initial value of a field in a struct expression. A named initializer matches a field of the constructee based on its name.
+    - 2.3.3.1. An indexed initializer specifies the index and initial value of a field in a struct expression. An indexed initializer matches a field of the constructee based on its index.
 
-    - 2.3.5.2. The type of a named initializer and the type of the matched field shall be compatible.
-
-
-- 2.3.6. Shorthand initializer:
-
-    - 2.3.6.1. A shorthand initializer specifies the name of a field in a struct expression. A shorthand initializer is equivalent to a named initializer with the identifier matching the field's name.
-
-    - 2.3.6.2. The type of a shorthand initializer and the type of the matched field shall be compatible.
+    - 2.3.3.2. The type of the operand of an indexed initializer and the type of the matched field shall be compatible.
 
 
-2.3.7. If the constructee is a record enum variant or a record struct, then
+- 2.3.4. Named initializer:
+
+    - 2.3.4.1. A named initializer specifies the name and initial value of a field in a struct expression. A named initializer matches a field of the constructee based on its name.
+
+    - 2.3.4.2. The type of a named initializer and the type of the matched field shall be compatible.
+
+
+- 2.3.5. Shorthand initializer:
+
+    - 2.3.5.1. A shorthand initializer specifies the name of a field in a struct expression. A shorthand initializer is equivalent to a named initializer with the identifier matching the field's name.
+
+    - 2.3.5.2. The type of a shorthand initializer and the type of the matched field shall be compatible.
+
+
+2.3.6. If the constructee is a record enum variant or a record struct, then
 
 - For each field of the constructee, the struct expression shall either:
 
@@ -199,7 +196,7 @@ There are the following types of initializers:
 
 
 
-2.3.8. If the constructee is a tuple enum variant or a tuple struct, then
+2.3.7. If the constructee is a tuple enum variant or a tuple struct, then
 
 - For each field of the constructee, the struct expression shall either:
 
@@ -212,7 +209,7 @@ There are the following types of initializers:
 
 
 
-2.3.9. If the constructee is a union type, then
+2.3.8. If the constructee is a union type, then
 
 - The struct expression shall not contain a base initializer.
 
@@ -224,11 +221,11 @@ There are the following types of initializers:
 
 
 
-2.3.10. If the constructee is a unit enum variant or a unit struct, then the struct expression shall have at most one base initializer.
+2.3.9. If the constructee is a unit enum variant or a unit struct, then the struct expression shall have at most one base initializer.
 
 
 ### Runtime Semantics
-2.3.11. The evaluation of a struct expression evaluates its operands from left to right.
+2.3.10. The evaluation of a struct expression evaluates its operands from left to right.
 
 ### Examples
 <pre>
