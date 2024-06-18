@@ -156,7 +156,7 @@ A struct expression constructs a value of a struct, enum, or union. It consists 
 There are the following types of initializers:
 - 2.3.2. Base initializer:
 
-    - 2.3.2.1. A base initializer specifies an enum value, a struct value, or a union value as a base for construction in a struct expression. Its fields fill unmatched fields in the constructee.
+    - 2.3.2.1. A base initializer specifies an enum value, or a struct value as a base for construction in a struct expression. Its fields fill unmatched fields in the constructee.
 
     - 2.3.2.2. A base initializer has the type of its operand, which shall be the same as the type of the constructee.
 
