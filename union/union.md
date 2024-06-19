@@ -46,7 +46,8 @@ Unsafe \
 Weak keywords \
 Patterns \
 Type Representation \
-Recursive Types
+Recursive Types \
+Implementations
 
 # 2. Expressions
 ## 2.2. Field Access Expressions <a name="2.2."></a>
@@ -103,7 +104,8 @@ Generics \
 Unsafe \
 Weak keywords \
 Patterns \
-Borrowing 
+Borrowing \
+Implementations 
 
 
 
@@ -276,4 +278,5 @@ Generics \
 Unsafe \
 Weak keywords \
 Patterns \
-Borrowing 
+Borrowing \
+Implementations
