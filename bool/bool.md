@@ -88,6 +88,12 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
     println!("they are not both true");
   }
 ```
+```
+  let invalid_bool: bool = unsafe { mem::transmute(0x02) };
+  if invalid_bool {
+    println!("This causes undefined behavior");
+  }
+```
 
 ### References
 [Boolean Literal Expressions](#2.1.1.) \
