@@ -8,7 +8,7 @@
         union Name GenericParameters? WhereClause? { StructFields? }
 
 ### Description
-A union type is an abstract data type that is a sum of other types, similar to the C union.
+A union type is an abstract data type that is a sum of other types, similar to the C union. Union fields share the same storage.
 
 ### Legality Rules
 1.2.1. A union's size is determined by the size of its largest field.
@@ -19,16 +19,12 @@ A union type is an abstract data type that is a sum of other types, similar to t
 
 1.2.4. The type of a union field shall be one of the following:
 - 1.2.4.1. A `copy` type
-- 1.2.4.2. A mutable reference type
+- 1.2.4.2. A mutable `reference type`
 - 1.2.4.3. `core::mem::ManuallyDrop`
 - 1.2.4.4. A `tuple` type where all fields can hold valid union types
 - 1.2.4.5. An `array` type with elements that can be valid union types
 
 1.2.5. By default, the memory layout of a union is undefined, but the `#[repr(...)]` attribute specifies a fixed layout. 
-
-### Runtime Semantics
-1.2.6. The characteristic of unions is that all fields share the same storage. Consequently, writing to one field of a union can overwrite its other fields.
-
 
 ### Examples
 <pre>
@@ -89,7 +85,9 @@ The container operand indicates the data structure from which the field is acces
 2.2.6. For `structs` and `unions`, the field selector corresponds to the name of the selected field.
 
 ### Runtime Semantics
-2.2.7. Evaluating a field access expression involves evaluating its container operand.
+2.2.7. The characteristic of unions is that all fields share the same storage. Consequently, writing to one field of a union will overwrite its other fields.
+
+2.2.8. Evaluating a field access expression involves evaluating its container operand.
 
 ### Undefined Behavior
 Reading a selected field of a [union type](#1.2.), when the union contains data that is invalid for that field's type, results in undefined behavior.

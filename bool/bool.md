@@ -7,7 +7,7 @@ The boolean type, or bool, is a basic data type that appears in the `language pr
 ### Legality Rules
 - 1.1.1. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.
 - 1.1.2. The size and alignment of a bool are both 1 byte.
-- 1.1.3. `true` is transmuted to the integer value `1`, and `false` is transmuted to the integer value `0`.
+- 1.1.3. `true` is transmuted to the `u8` value `1`, and `false` is transmuted to the `u8` value `0`.
 - 1.1.4. The following operations are defined for bool:
 
 ### 1.1.4.1. Logical NOT 
