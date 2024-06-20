@@ -10,19 +10,19 @@
       | LazyOrExpression
 
     LazyAndExpression ::= 
-        BooleanExpression && BooleanExpression
+        LeftOperand && RightOperand
 
     LazyOrExpression ::= 
-        BooleanExpression || BooleanExpression
+        LeftOperand || RightOperand
 
 
 ### Description
 A lazy boolean expression performs short-circuit Boolean arithmetic. 
-Lazy AND expressions (&&) and lazy OR expressions (||) differ from bitwise AND (&) and bitwise OR expressions (|), because they only evaluate the right-hand operand if necessary.
+Lazy AND expressions (&&) and lazy OR expressions (||) differ from bitwise AND (&) and bitwise OR expressions (|), because they only evaluate the right-hand operand if necessary. Also, lazy boolean expressions are only applicable to operands of [bool type](#1.1.).
 
 ### Legality Rules
 2.2.1.1. The operands of a lazy boolean expression must be of [bool type](#1.1.). \
-2.2.1.2. The type of a lazy boolean expression is [bool](#1.1.), and has a value of either `true` or `false`. \
+2.2.1.2. The type of a lazy boolean expression is [bool](#1.1.). \
 2.2.1.3. A lazy AND expression uses short-circuit AND logic, with the `&&` operator. \
 2.2.1.4. A lazy OR expression uses short-circuit OR logic, with the `||` operator. 
 

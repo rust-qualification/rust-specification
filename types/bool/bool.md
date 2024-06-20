@@ -2,16 +2,14 @@
 ## 1.1. Bool Types <a name="1.1."></a>
 ### Description
 
-The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values are mainly used in conditionals, in `if` and `while` expressions.
+The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values are mainly used in conditionals, `while` expressions and `boolean operations`.
 
 ### Legality Rules
-- 1.1.1. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.
+- 1.1.1. There are two boolean values, `true` and `false`. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.
 - 1.1.2. The size and alignment of a bool are both 1 byte.
-- 1.1.3. `true` is transmuted to the `u8` value `1`, and `false` is transmuted to the `u8` value `0`.
 
 ### Undefined Behavior
-It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. Transmuting a `u8` to a `bool` can lead to such invalid boolean values.
-
+It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. 
 
 ### Examples
 `
@@ -26,10 +24,16 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
   }
 ```
 ```
-  let invalid_bool: bool = unsafe { mem::transmute(0x02) };
-  if invalid_bool {
-    println!("This causes undefined behavior");
+  while condition1 | condition2 {
+    // Loop body
   }
+```
+```
+  <!-- let byte_pattern: u8 = 0x02;
+  let invalid_bool: bool = unsafe { mem::transmute(byte_pattern) };
+  if invalid_bool {
+    println!("This 'if' causes undefined behavior");
+  } -->
 ```
 
 ### References
