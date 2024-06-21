@@ -80,9 +80,9 @@ There are the following types of initializers:
 
     - 2.3.6.2. Contain at most one matched shorthand initializer, or
 
-    - 2.3.6.2. Have exactly one base initializer.
+    - 2.3.6.3. Have exactly one base initializer.
 
-- 2.3.6.3. A base initializer is allowed even if all fields of the constructee have been matched.
+- 2.3.6.4. A base initializer is allowed even if all fields of the constructee have been matched.
 
 
 
@@ -151,7 +151,7 @@ There are the following types of initializers:
 </pre>
 
 ### References
-[Union Types](#1.2.) \
+Union Types \
 Generics \
 Unsafe \
 Weak keywords \

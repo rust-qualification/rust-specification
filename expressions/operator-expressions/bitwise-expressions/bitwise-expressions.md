@@ -1,6 +1,6 @@
 # 2. Expressions
-### 2.2. Operator Expressions
-### 2.2.3. Bitwise Expressions <a name="2.2.3."></a>
+### 2.4. Operator Expressions
+### 2.4.1. Bitwise Expressions <a name="2.4.1."></a>
 
 ### Syntax
    <a name="bitwise-expression-syntax"></a>
@@ -32,10 +32,11 @@
         LeftOperand >> RightOperand
 
 ### Description
-A bit expression is an expression that computes a value from two operands using bit arithmetic.
+A bit expression computes a value by performing bit arithmetic operations on two operands.
+
 ### Legality Rules
 
-They are used with primitive types, bitwise and, or, xor, not are also used with bools.
+They are used with integer and bools, shift operations not with bools.
 
 BitAnd: bit and
 - The type of the left operand of a bit and expression shall implement the core::ops::BitAnd trait where the type of the right operand is the trait implementation type parameter.
@@ -95,9 +96,9 @@ Shift right expression: Arithmetic right shift on signed integer types, logical 
 - The value of a shift right expression is the result of core::ops::Shr::shr(left_operand, right_operand).
 
 
-1.1.4. For bool:
+For bool type:
 
-### 1.1.4.1. Bitwise NOT 
+### Bitwise NOT 
 
 | b     | !b    |
 |-------|-------|
@@ -105,7 +106,7 @@ Shift right expression: Arithmetic right shift on signed integer types, logical 
 | false | true  |
 
 
-### 1.1.4.2. Bitwise OR 
+### Bitwise OR 
 
 | a     | b     | a \| b |
 |-------|-------|--------|
@@ -115,7 +116,7 @@ Shift right expression: Arithmetic right shift on signed integer types, logical 
 | false | false | false  |
 
 
-### 1.1.4.3. Bitwise AND 
+### Bitwise AND 
 
 | a     | b     | a & b  |
 |-------|-------|--------|
@@ -124,7 +125,7 @@ Shift right expression: Arithmetic right shift on signed integer types, logical 
 | false | true  | false  |
 | false | false | false  |
 
-### 1.1.4.4. Bitwise XOR
+### Bitwise XOR
 
 | a     | b     | a ^ b  |
 |-------|-------|--------|
@@ -135,75 +136,81 @@ Shift right expression: Arithmetic right shift on signed integer types, logical 
 
 ### Runtime Semantics
 
-The evaluation of a bit and expression proceeds as follows:
+The evaluation of a bit and expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::ops::BitAnd::bitand(left_operand, right_operand) is invoked.
+- core::ops::BitAnd::bitand(left_operand, right_operand) is called.
 
 
 
-The evaluation of a bit or expression proceeds as follows:
-
-- The left operand is evaluated.
-
-- The right operand is evaluated.
-
-- core::ops::BitOr::bitor(left_operand, right_operand) is invoked.
-
-
-
-The evaluation of a bit xor expression proceeds as follows:
+The evaluation of a bit or expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::ops::BitXor::bitxor(left_operand, right_operand) is invoked.
+- core::ops::BitOr::bitor(left_operand, right_operand) is called.
 
 
 
-The evaluation of a negation expression with a BitwiseNegationOperator proceeds as follows:
+The evaluation of a bit xor expression has the following steps:
+
+- The left operand is evaluated.
+
+- The right operand is evaluated.
+
+- core::ops::BitXor::bitxor(left_operand, right_operand) is called.
+
+
+
+The evaluation of a bitwise negation expression has the following steps:
 
 - The operand is evaluated.
 
-- If the type of the operand is an integer type, then the negation expression evaluates to the bitwise negation of the operand.
+- If the operand is of an integer type, the negation expression results in the bitwise negation of that operand.
 
-- If the type of the operand is bool, then the result is computed as follows, depending on the value of the operand:
+- If the operand is of type bool, negation results in false if the operand is true, and vice versa.
 
-- If the type of operand is neither an integer type nor bool, then core::ops::Not::not(operand) is invoked.
-
-
-
-The evaluation of a shift left expression proceeds as follows:
-
-- The left operand is evaluated.
-
-- The right operand is evaluated.
-
-- core::ops::Shl::shl(left_operand, right_operand) is invoked.
+- If the type of operand is neither an integer nor bool, then core::ops::Not::not(operand) is called.
 
 
 
-The evaluation of a shift right expression proceeds as follows:
+The evaluation of a shift left expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::ops::Shr::shr(left_operand, right_operand) is invoked.
+- core::ops::Shl::shl(left_operand, right_operand) is called.
+
+
+
+The evaluation of a shift right expression has the following steps:
+
+- The left operand is evaluated.
+
+- The right operand is evaluated.
+
+- core::ops::Shr::shr(left_operand, right_operand) is called.
+
 
 ### Examples
 ```
     0b1010 & 0b1100
     0b1010 | 0b0011
-    0b1010 ^ 0b1001
-    13 << 3
-    -10 >> 2
+    1 ^ 0
     true & false
+    true | false
+    true ^ false
     !false
-    -42
+    10 << 2
+    -10 >> 2
 ```
 ### References
+Bool Types \
+Lazy Boolean Expressions \
+If Expressions \
+While Loops Expressions 

@@ -1,6 +1,6 @@
 # 2. Expressions
-### 2.2. Operator Expressions
-### 2.2.3. Comparison Expressions <a name="2.2.3."></a>
+### 2.4. Operator Expressions
+### 2.4.3. Comparison Expressions <a name="2.4.3."></a>
 
 ### Syntax
    <a name="comparison-expression-syntax"></a>
@@ -32,10 +32,21 @@
         LeftOperand != RightOperand
 
 ### Description
+A bit expression computes a value by comparing two operands.
 
 ### Legality Rules
 
 Used with primitive types.
+The same types, not even integer with float, or i64 and i32.
+with chars, we compare are compared lexicographically (alphabetical order for letters)
+with strings, are compared lexicographically, character by character
+with numbers, just compare them
+with bools, just compare based on the table
+true is considered greater than false.
+
+Used also with tuples, structs, arrays. vectors
+
+pointers, references only with equality
 
 Parentheses are required when chaining comparison operators. For example, the expression a == b == c is invalid and may be written as (a == b) == c.
 
@@ -68,7 +79,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 - The value of a not-equals expression is the result of core::cmp::PartialEq::ne(&left_operand, &right_operand).
 
 1.1.4. The following operations are defined for bool:
-### 1.1.4.5. Equality
+### Equality
 
 | a     | b     | a == b |
 |-------|-------|--------|
@@ -78,7 +89,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 | false | false | true   |
 
 
-### 1.1.4.6. Greater Than
+### Greater Than
 
 | a     | b     | a > b  |
 |-------|-------|--------|
@@ -87,7 +98,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 | false | true  | false  |
 | false | false | false  |
 
-### 1.1.4.6. Greater Equal Than
+### Greater Equal Than
 
 | a     | b     | a >= b |
 |-------|-------|--------|
@@ -97,7 +108,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 | false | false | true   |
 
 
-### 1.1.4.6. Less Than
+### Less Than
 
 | a     | b     | a < b  |
 |-------|-------|--------|
@@ -106,7 +117,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 | false | true  | true   |
 | false | false | false  |
 
-### 1.1.4.6. Less Equal Than
+### Less Equal Than
 
 | a     | b     | a <= b |
 |-------|-------|--------|
@@ -116,7 +127,7 @@ Parentheses are required when chaining comparison operators. For example, the ex
 | false | false | true   |
 
 
-### 1.1.4.6. Inequality
+### Inequality
 
 | a     | b     | a != b |
 |-------|-------|--------|
@@ -132,75 +143,74 @@ Parentheses are required when chaining comparison operators. For example, the ex
 1.1.4.10. ` a <= b is the same as a == b | a < b` 
 
 ### Runtime Semantics
-The evaluation of an equals expression proceeds as follows:
+The evaluation of an equals expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::cmp::PartialEq::eq(&left_operand, &right_operand) is invoked.
+- core::cmp::PartialEq::eq(&left_operand, &right_operand) is called.
 
 
 
-The evaluation of a greater-than expression proceeds as follows:
-
-- The left operand is evaluated.
-
-- The right operand is evaluated.
-
-- core::cmp::PartialOrd::gt(&left_operand, &right_operand) is invoked.
-
-
-
-The evaluation of a greater-than-or-equals expression proceeds as follows:
+The evaluation of a greater-than expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::cmp::PartialOrd::ge(&left_operand, &right_operand) is invoked.
+- core::cmp::PartialOrd::gt(&left_operand, &right_operand) is called.
 
 
 
-The evaluation of a less-than expression proceeds as follows:
-
-- The left operand is evaluated.
-
-- The right operand is evaluated.
-
-- core::cmp::PartialOrd::lt(&left_operand, &right_operand) is invoked.
-
-
-
-The evaluation of a less-than-or-equals expression proceeds as follows:
+The evaluation of a greater-than-or-equals expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::cmp::PartialOrd::le(&left_operand, &right_operand) is invoked.
+- core::cmp::PartialOrd::ge(&left_operand, &right_operand) is called.
 
 
 
-The evaluation of a not-equals expression proceeds as follows:
+The evaluation of a less-than expression has the following steps:
 
 - The left operand is evaluated.
 
 - The right operand is evaluated.
 
-- core::cmp::PartialEq::ne(&left_operand, &right_operand) is invoked.
+- core::cmp::PartialOrd::lt(&left_operand, &right_operand) is called.
+
+
+
+The evaluation of a less-than-or-equals expression has the following steps:
+
+- The left operand is evaluated.
+
+- The right operand is evaluated.
+
+- core::cmp::PartialOrd::le(&left_operand, &right_operand) is called.
+
+
+
+The evaluation of an inequality expression has the following steps:
+
+- The left operand is evaluated.
+
+- The right operand is evaluated.
+
+- core::cmp::PartialEq::ne(&left_operand, &right_operand) is called.
 
 ### Examples
 ```
-    12 == 12
-    42 > 12
-    42 >= 35
-    42 < 109
-    42 <= 42
-    12 != 42
+    2 == 2
+    3 > 2
+    3 >= 2
+    1 < 2
+    1 <= 1
+    1 != 1
 ```
 
 ### References
 [Bool Types](#1.1.) \
 [Boolean Literal Expressions](#2.1.1.)  
-
