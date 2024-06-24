@@ -34,7 +34,8 @@ union MyUnion {
     f1: u32,
     f2: f32,
 }
-
+</pre>
+<pre>
 union GenericUnion<A, B>
 where
     X: Copy,
