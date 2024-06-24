@@ -35,20 +35,31 @@
 A bit expression computes a value by performing bit arithmetic operations on two operands.
 
 ### Legality Rules
-Bit expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
-Shift left and right expressions are not used with values of [bool](../../../types/bool/bool.md#bool) type.
 
-BitAnd: bit and
+<!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> 
+2.4.2.1. Bit expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
+
+<!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b -->
+2.4.2.2. Shift left and right expressions are not used with values of [bool](../../../types/bool/bool.md#bool) type.
+
+
+
+There are the following comparison expressions:
+
+<!-- ba09332a-f44d-46e7-9dd2-38885daa3435 -->
+2.4.2.3. `BitAnd`:
+- A bit AND expression performs bit OR arithmetic.
+
 - The type of the left operand of a bit and expression shall implement the `core::ops::BitAnd` trait and the type of the right operand shall be the trait implementation type parameter.
 
 - The type of a bit AND expression shall be `core::ops::BitAnd::Output`.
 
 - The value of a bit AND expression shall be the result of `core::ops::BitAnd::bitand(left_operand, right_operand)`.
 
+<!-- 071612e5-2ff0-4fe2-827b-a2eb4dbd3aaf -->
+2.4.2.4. `BitOr`:
+- A bit OR expression performs bit OR arithmetic.
 
-
-
-`BitOr`: bit or
 - The type of the left operand of a bit or expression shall implement the `core::ops::BitOr` trait and the type of the right operand shall be the trait implementation type parameter.
 
 - The type of a bit OR expression shall be `core::ops::BitOr::Output`.
@@ -56,8 +67,9 @@ BitAnd: bit and
 - The value of a bit OR expression shall be the result of `core::ops::BitOr::bitor(left_operand, right_operand)`.
 
 
-
-`BitXor`: bit exclusive
+<!-- e74c08ba-07fe-4c10-b68e-1028b289ea77 -->
+2.4.2.5. `BitXor`: 
+- A bit XOR expression performs bit exclusive OR arithmetic.
 
 - The type of the left operand of a bit xor expression shall implement the `core::ops::BitXor` trait and the type of the right operand shall be the trait implementation type parameter.
 
@@ -66,8 +78,9 @@ BitAnd: bit and
 - The value of a bit XOR expression shall be the result of `core::ops::BitXor::bitxor(left_operand, right_operand)`.
 
 
-
-`BitNot`: negation
+<!-- 4be64039-f32e-4940-bd34-05226e987c3b -->
+2.4.2.6. `BitNot`: 
+- A negation expression performs negation to its operand.
 
 - The type of the operand of a bit negation expression shall implement the `core::ops::Not` trait.
 
@@ -76,8 +89,9 @@ BitAnd: bit and
 - The value of a bit negation expression shall be the result of `core::ops::Not::not(operand)`.
 
 
-
-`Shift left expression`: shift left arithmetic
+<!-- e2dcd73e-8e58-4302-ad00-a0443924c533 -->
+2.4.2.7. `Shift left expression`: 
+- A shift right expression performs bit shift left arithmetic.
 
 - The type of the left operand of a shift left expression shall implement the `core::ops::Shl` trait and the type of the right operand shall be the trait implementation type parameter.
 
@@ -86,8 +100,9 @@ BitAnd: bit and
 - The value of a shift left expression shall be the result of `core::ops::Shl::shl(left_operand, right_operand)`.
 
 
-
-`Shift right expression`: Arithmetic right shift on signed integer types, logical right shift on unsigned integer types.
+<!-- 8ef4930a-5429-45cc-bbe1-1e651b203d39 -->
+2.4.2.8. `Shift right expression`: 
+- A shift right expression performs bit shift right arithmetic.
 
 - The type of the left operand of a shift right expression shall implement the `core::ops::Shr` trait and the type of the right operand shall be the trait implementation type parameter.
 
@@ -96,7 +111,8 @@ BitAnd: bit and
 - The value of a shift right expression shall be the result of `core::ops::Shr::shr(left_operand, right_operand)`.
 
 
-<!-- e420b920-c632-48bb-ab6c-e3f069f3b893 --> The following operations are defined for [bool](../../../types/bool/bool.md#bool): <a name="bitwise-tables"></a>
+<!-- 1b093a78-f66d-4803-988c-d30851762abb -->
+2.4.2.9. The following operations are defined for [bool](../../../types/bool/bool.md#bool): <a name="bitwise-tables"></a>
 
 
 ### Bitwise NOT 
@@ -136,8 +152,8 @@ BitAnd: bit and
 | false | false | false  |
 
 ### Runtime Semantics
-
-The evaluation of a bit and expression has the following steps:
+<!-- 544fd80d-8fa9-43bf-b728-dcfa7d4ce16d -->
+2.4.2.10. The evaluation of a bit and expression has the following steps:
 
 - The left operand is assessed.
 
@@ -146,8 +162,8 @@ The evaluation of a bit and expression has the following steps:
 - `core::ops::BitAnd::bitand(left_operand, right_operand)` is called.
 
 
-
-The evaluation of a bit or expression has the following steps:
+<!-- 655da84b-0292-4b89-b976-83c49f762828 -->
+2.4.2.11. The evaluation of a bit or expression has the following steps:
 
 - The left operand is assessed.
 
@@ -156,8 +172,8 @@ The evaluation of a bit or expression has the following steps:
 - `core::ops::BitOr::bitor(left_operand, right_operand)` is called.
 
 
-
-The evaluation of a bit xor expression has the following steps:
+<!-- 98d30a3d-3f93-4012-afca-19117782571c -->
+2.4.2.12. The evaluation of a bit xor expression has the following steps:
 
 - The left operand is assessed.
 
@@ -166,20 +182,20 @@ The evaluation of a bit xor expression has the following steps:
 - `core::ops::BitXor::bitxor(left_operand, right_operand)` is called.
 
 
-
-The evaluation of a bitwise negation expression has the following steps:
+<!-- b65fbcb8-1870-48f8-9181-e4cbbf9d5bd6 -->
+2.4.2.13. The evaluation of a bitwise negation expression has the following steps:
 
 - The operand is assessed.
 
-- If the operand is of an integer type, the negation expression results in the bitwise negation of that operand.
+- If the operand is of an `integer` type, the negation expression results in the bitwise negation of that operand.
 
-- If the operand is of type [bool](../../../types/bool/bool.md#bool), negation results in false if the operand is true, and vice versa.
+- If the operand is of type [bool](../../../types/bool/bool.md#bool), negation results in false, if the operand is true, and vice versa.
 
-- If the type of operand is neither an integer nor [bool](../../../types/bool/bool.md#bool), then `core::ops::Not::not(operand)` is called.
+- If the type of operand is neither an `integer` nor [bool](../../../types/bool/bool.md#bool), then `core::ops::Not::not(operand)` is called.
 
 
-
-The evaluation of a shift left expression has the following steps:
+<!-- 7420df68-e9e5-4e5e-9cd1-c444c3268d19 -->
+2.4.2.14. The evaluation of a shift left expression has the following steps:
 
 - The left operand is assessed.
 
@@ -188,8 +204,8 @@ The evaluation of a shift left expression has the following steps:
 - `core::ops::Shl::shl(left_operand, right_operand)` is called.
 
 
-
-The evaluation of a shift right expression has the following steps:
+<!-- e4b1e172-0294-4bd2-8fbf-ff03fb58a001 -->
+2.4.2.15. The evaluation of a shift right expression has the following steps:
 
 - The left operand is assessed.
 
