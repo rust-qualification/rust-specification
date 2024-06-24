@@ -19,14 +19,14 @@ A union type is an abstract data type that is a sum of other types. Union fields
 
 1.2.4. <!-- 93059842-a3be-4dd1-92c7-1b79f40e252f --> The union can include a `where clause` to specify constraints on the `generic parameters`. 
 
-1.2.4. The type of a union field shall be one of the following:
-- 1.2.4.1. <!-- 26ad2e4a-ff73-4eb4-b16f-d33a6e5d7e7f --> A `copy` type
-- 1.2.4.2. <!-- 11a3041f-f307-4ff4-acf3-fb256baf9f49 --> A mutable `reference type`
-- 1.2.4.3. <!-- 847acf71-84b6-4ace-92d8-9e127ba0911e --> `core::mem::ManuallyDrop`
-- 1.2.4.4. <!-- 218f449a-7973-4157-8a92-87645b9ceedc --> A `tuple` type where all fields can hold valid union types
-- 1.2.4.5. <!-- d1b5850a-f09d-4785-9d56-6ec53d7cfccf --> An `array` type with elements that can be valid union types
+1.2.5. The type of a union field shall be one of the following:
+- 1.2.5.1. <!-- 26ad2e4a-ff73-4eb4-b16f-d33a6e5d7e7f --> A `copy` type
+- 1.2.5.2. <!-- 11a3041f-f307-4ff4-acf3-fb256baf9f49 --> A mutable `reference type`
+- 1.2.5.3. <!-- 847acf71-84b6-4ace-92d8-9e127ba0911e --> `core::mem::ManuallyDrop`
+- 1.2.5.4. <!-- 218f449a-7973-4157-8a92-87645b9ceedc --> A `tuple` type where all fields can hold valid union types
+- 1.2.5.5. <!-- d1b5850a-f09d-4785-9d56-6ec53d7cfccf --> An `array` type with elements that can be valid union types
 
-1.2.5. By default, the memory layout of a union is undefined, but the `#[repr(...)]` attribute specifies a fixed layout. 
+1.2.6. By default, the memory layout of a union is undefined, but the `#[repr(...)]` attribute specifies a fixed layout. 
 
 ### Examples
 <pre>

@@ -47,7 +47,7 @@ A bit expression computes a value by comparing two operands. These operands can 
 - 2.4.3.5.1. `Chars` are compared lexicographically.
 - 2.4.3.5.2. `Strings` are compared lexicographically, character by character
 - 2.4.3.5.3. `Numbers` are compared on their numerical values.
-- 2.4.3.5.4. `Bools` are compared based on the following tables. 
+- 2.4.3.5.4. `Bools` are compared based on the following [tables](#comparison-tables). 
 
 2.4.3.6. `Pointers` and `references` can also be compared, only using the equality and inequality expressions.
 
@@ -84,7 +84,7 @@ There are the following comparison expressions:
 - The type of the left operand of a not-equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand is the trait implementation type parameter.
 - The value of a not-equals expression is the result of `core::cmp::PartialEq::ne(&left_operand, &right_operand)`.
 
-2.4.3.14. The following operations are defined for bool:
+2.4.3.14. The following operations are defined for bool: <a name="comparison-tables"></a>
 ### Equality
 
 | a     | b     | a == b |

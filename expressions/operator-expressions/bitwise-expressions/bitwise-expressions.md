@@ -210,7 +210,7 @@ The evaluation of a shift right expression has the following steps:
     -10 >> 2
 ```
 ### References
-Bool Types \
-Lazy Boolean Expressions \
+[Bool Types](../../../types/bool/bool.md#bool) \
+[Boolean Literal Expressions](../../../types/bool/bool.md#boolean-literal) 
 If Expressions \
 While Loops Expressions 
