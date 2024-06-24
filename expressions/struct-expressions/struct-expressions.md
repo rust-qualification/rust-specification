@@ -36,7 +36,7 @@
 
 
 ### Description
-A struct expression constructs a value of a `struct`, `enum`, or `union`. It consists of a path to the `struct`, `enum` variant, or `union` item being created, followed by the field values of the item, which can be specified in any order.
+A struct expression constructs a value of a `struct`, `enum`, or [union](../../types/union/union.md#union). It consists of a path to the `struct`, `enum` variant, or [union](../../types/union/union.md#union) item being created, followed by the field values of the item, which can be specified in any order.
 
 
 ### Legality Rules

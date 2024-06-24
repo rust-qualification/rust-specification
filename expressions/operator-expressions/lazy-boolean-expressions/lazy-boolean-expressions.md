@@ -49,13 +49,13 @@ Lazy AND expressions (&&) and lazy OR expressions (||) differ from bitwise AND (
 
 ### Runtime Semantics
 2.4.1.6. <!-- 266ee141-7c6b-4738-bc33-24a72e8e3d99 --> The evaluation of a lazy AND expression has the following steps:
-- The left operand is evaluated. 
-- If the left operand is `true`, the right operand is evaluated and returned as the value of the lazy AND expression.
+- The left operand is assessed. 
+- If the left operand is `true`, the right operand is assessed and returned as the value of the lazy AND expression.
 - If the left operand is `false`, the expression evaluates to `false`. 
 
 2.4.1.7. <!-- 0735bf32-a30d-4a64-8ca1-8ad873bc9e04 --> The evaluation of a lazy OR expression has the following steps:
-- The left operand is evaluated. 
-- If the left operand is `false`, the right operand is evaluated and returned as the value of the lazy OR expression.
+- The left operand is assessed. 
+- If the left operand is `false`, the right operand is assessed and returned as the value of the lazy OR expression.
 - If the left operand is `true`, the expression evaluates to `true`.
 
 ### Examples

@@ -37,7 +37,7 @@ A bit expression computes a value by comparing two operands. These operands can 
 ### Legality Rules
 2.4.3.1. <!-- 35bd3b3e-959c-41d9-936d-e70c110dd8b5 --> A comparison expression implicitly takes shared borrows of its operands.
 
-2.4.3.2. <!-- 915004e3-13c5-445a-9159-f29f39b65362 --> The type of a comparison expression is of type `bool`.
+2.4.3.2. <!-- 915004e3-13c5-445a-9159-f29f39b65362 --> The type of a comparison expression is of type [bool](../../../types/bool/bool.md#bool).
 
 2.4.3.3. <!-- 99af6d58-c504-41dd-a325-9341bd0ae9a8 --> Both operands in these expressions should be of the same type, even within the same category of integers. 
 
@@ -55,35 +55,35 @@ There are the following comparison expressions:
 
 2.4.3.7. `==` <!-- 04aa0dda-0706-44cb-9ab3-7945aeb58bb3 --> :
 - An `equals` expression checks equality.
-- The type of the left operand of an equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand is the trait implementation type parameter.
-- The value of an equals expression is the result of `core::cmp::PartialEq::eq(&left_operand, &right_operand)`.
+- The type of the left operand of an equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of an equals expression shall be the result of `core::cmp::PartialEq::eq(&left_operand, &right_operand)`.
 
 2.4.3.8. `>` <!-- 9289fb9d-67b5-4f30-bf22-2b9d646677aa --> :
 - A `greater-than` expression checks for a greater-than relationship.
-- The type of the left operand of a greater-than expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand is the trait implementation type parameter.
-- The value of a greater-than expression is the result of `core::cmp::PartialOrd::gt(&left_operand, &right_operand)`.
+- The type of the left operand of a greater-than expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of a greater-than expression shall be the result of `core::cmp::PartialOrd::gt(&left_operand, &right_operand)`.
 
 2.4.3.9. `>=` <!-- 8c9f42c4-79b2-4017-ace4-81d08549c196 --> :
 - A `greater-than-or-equals` expression checks for a greater-than-or-equals relationship.
-- The type of the left operand of a greater-than-or-equals expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand is the trait implementation type parameter.
-- The value of a greater-than-or-equals expression is the result of `core::cmp::PartialOrd::ge(&left_operand, &right_operand)`.
+- The type of the left operand of a greater-than-or-equals expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of a greater-than-or-equals expression shall be the result of `core::cmp::PartialOrd::ge(&left_operand, &right_operand)`.
 
 2.4.3.10. `<` <!-- 4e4cbbd1-2bb4-40e4-b8ad-394526322e95 --> :
 - A `less-than` expression checks for a less-than relationship.
-- The type of the left operand of a less-than expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand is the trait implementation type parameter.
-- The value of a less-than expression is the result of `core::cmp::PartialOrd::lt(&left_operand, &right_operand)`.
+- The type of the left operand of a less-than expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of a less-than expression shall be the result of `core::cmp::PartialOrd::lt(&left_operand, &right_operand)`.
 
 2.4.3.11. `<=` <!-- 02e86ee3-3ff4-4756-b7fb-d82534a35556 --> :
 - A `less-than-or-equals` expression checks for a less-than-or-equals relationship.
-- The type of the left operand of a less-than-or-equals expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand is the trait implementation type parameter.
-- The value of a less-than-or-equals expression is the result of `core::cmp::PartialOrd::le(&left_operand, &right_operand)`.
+- The type of the left operand of a less-than-or-equals expression shall implement the `core::cmp::PartialOrd` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of a less-than-or-equals expression shall be the result of `core::cmp::PartialOrd::le(&left_operand, &right_operand)`.
 
 2.4.3.12. `!=` <!-- ac7610ba-251c-4854-bffc-3c0b9f8fdb7c --> :
 - A `not-equals` expression checks for inequality.
-- The type of the left operand of a not-equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand is the trait implementation type parameter.
-- The value of a not-equals expression is the result of `core::cmp::PartialEq::ne(&left_operand, &right_operand)`.
+- The type of the left operand of a not-equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of a not-equals expression shall be the result of `core::cmp::PartialEq::ne(&left_operand, &right_operand)`.
 
-2.4.3.13. <!-- e420b920-c632-48bb-ab6c-e3f069f3b893 --> The following operations are defined for bool: <a name="comparison-tables"></a>
+2.4.3.13. <!-- e420b920-c632-48bb-ab6c-e3f069f3b893 --> The following operations are defined for [bool](../../../types/bool/bool.md#bool): <a name="comparison-tables"></a>
 ### Equality
 
 | a     | b     | a == b |
