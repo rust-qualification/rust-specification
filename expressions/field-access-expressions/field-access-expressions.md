@@ -47,7 +47,7 @@ A field is accessed to be read or written.
 - `field_bits` is the bit representation of the selected field.
 
 ### Undefined Behavior
-Reading a selected field of a [union type](#union), when the union contains data that is invalid for that field's type, results in undefined behavior.
+Reading a selected field of a [union type](../../types/union/union.md#union), when the union contains data that is invalid for that field's type, results in undefined behavior.
 
 ### Examples
 `

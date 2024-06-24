@@ -99,7 +99,7 @@ There are the following types of initializers:
 
 
 
-2.3.8. If the constructee is a [union type](#union), then
+2.3.8. If the constructee is a [union type](../../types/union/union.md#union), then
 
 - 2.3.8.1. The `struct expression` shall not contain a base initializer.
 
@@ -151,7 +151,7 @@ There are the following types of initializers:
 </pre>
 
 ### References
-Union Types \
+[Union Types](../../types/union/union.md#union) \
 Generics \
 Unsafe \
 Weak keywords \
