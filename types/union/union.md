@@ -26,7 +26,7 @@ A union type is an abstract data type that is a sum of other types. Union fields
 - 1.2.5.4. <!-- 218f449a-7973-4157-8a92-87645b9ceedc --> A `tuple` type where all fields can hold valid union types
 - 1.2.5.5. <!-- d1b5850a-f09d-4785-9d56-6ec53d7cfccf --> An `array` type with elements that can be valid union types
 
-1.2.6. By default, the memory layout of a union is undefined, but the `#[repr(...)]` attribute specifies a fixed layout. 
+1.2.6. <!-- 3e3ac7d8-8bac-427d-8898-6ae9fc6277d4 --> By default, the memory layout of a union is undefined, but the `#[repr(...)]` attribute specifies a fixed layout. 
 
 ### Examples
 <pre>

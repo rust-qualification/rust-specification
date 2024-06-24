@@ -101,7 +101,7 @@ There are the following types of initializers:
 
 2.3.8. If the constructee is a [union type](../../types/union/union.md#union), then
 
-- 2.3.8.1. The `struct expression` shall not contain a base initializer.
+- 2.3.8.1. <!-- 367c244b-0ac1-42d0-be03-3ad108ee89a3 --> The `struct expression` shall not contain a base initializer.
 
 - For the single field of the constructee, the `struct expression` shall either:
 
@@ -115,7 +115,7 @@ There are the following types of initializers:
 
 
 ### Runtime Semantics
-2.3.10. The evaluation of a `struct expression` evaluates its operands from left to right.
+2.3.10. <!-- f396e80e-02ba-46c9-89e4-776a5ad366b0 --> The evaluation of a `struct expression` evaluates its operands from left to right.
 
 ### Examples
 <pre>

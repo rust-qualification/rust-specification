@@ -5,10 +5,8 @@
 The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values can be used in `conditionals`, `while` expressions and `boolean operations`.
 
 ### Legality Rules
-<!-- ee7018f0-eca6-4ec1-b645-ffb98940f3ac --> 
-1.1.1. There are two boolean values, `true` and `false`. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.  
-<!-- 415bc9ad-19fb-4b7f-9423-8656c289a6ab --> 
-1.1.2. The size and alignment of a bool are both 1 byte. 
+1.1.1. <!-- ee7018f0-eca6-4ec1-b645-ffb98940f3ac --> There are two boolean values, `true` and `false`. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.  
+1.1.2. <!-- 415bc9ad-19fb-4b7f-9423-8656c289a6ab --> The size and alignment of a bool are both 1 byte. 
 
 ### Undefined Behavior
 It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. 
