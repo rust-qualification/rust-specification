@@ -36,7 +36,7 @@ union MyUnion {
 }
 </pre>
 <pre>
-union GenericUnion<A, B>
+union GenericUnion<X, Y>
 where
     X: Copy,
     Y: Copy,

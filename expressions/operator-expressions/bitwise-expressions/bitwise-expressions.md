@@ -38,7 +38,7 @@ A bit expression computes a value by performing bit arithmetic operations on two
 
 2.4.2.1. <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bit expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
 
-2.4.2.2. <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Shift left and right expressions are not used with values of [bool](../../../types/bool/bool.md#bool) type.
+2.4.2.2. <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Except for shift left and right expressions, which are not used with values of [bool](../../../types/bool/bool.md#bool) type.
 
 
 
@@ -89,7 +89,7 @@ There are the following comparison expressions:
 
 
 2.4.2.7. <!-- e2dcd73e-8e58-4302-ad00-a0443924c533 --> `Shift left expression`: 
-- A shift right expression performs bit shift left arithmetic.
+- A shift left expression performs bit shift left arithmetic.
 
 - The type of the left operand of a shift left expression shall implement the `core::ops::Shl` trait and the type of the right operand shall be the trait implementation type parameter.
 
