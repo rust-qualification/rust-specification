@@ -71,7 +71,7 @@ Reading a selected field of a [union type](#union), when the union contains data
 ```
 
 ### References
-[Union Types](types/union/union.md#union) \
+[Union Types](../../types/union/union.md#union) \
 Generics \
 Unsafe \
 Weak keywords \
