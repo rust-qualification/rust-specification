@@ -1,6 +1,6 @@
 # 2. Expressions
 ### 2.4. Operator Expressions
-### 2.4.3. Comparison Expressions <a name="comparison expression"></a>
+### 2.4.3. Comparison Expressions <a name="comparison expressions"></a>
 
 ### Syntax
    <a name="comparison-expression-syntax"></a>

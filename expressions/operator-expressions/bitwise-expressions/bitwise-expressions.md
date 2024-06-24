@@ -1,6 +1,6 @@
 # 2. Expressions
 ### 2.4. Operator Expressions
-### 2.4.1. Bitwise Expressions <a name="bitwise-expression"></a>
+### 2.4.1. Bitwise Expressions <a name="bitwise-expressions"></a>
 
 ### Syntax
    <a name="bitwise-expression-syntax"></a>

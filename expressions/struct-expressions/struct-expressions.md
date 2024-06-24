@@ -1,5 +1,5 @@
 # 2. Expressions
-## 2.3. Struct Expressions <a name="struct-expression"></a>
+## 2.3. Struct Expressions <a name="struct-expressions"></a>
 
 ### Syntax
    <a name="struct-expression-syntax"></a>

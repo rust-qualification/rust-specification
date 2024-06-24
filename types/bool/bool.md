@@ -40,7 +40,9 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
 
 ### References
 [Boolean Literal Expressions](#boolean-literal) \
-Lazy Boolean Expressions \
+[Lazy Boolean Expressions](../../expressions/operator-expressions/lazy-boolean-expressions/lazy-boolean-expressions.md#lazy-boolean-expressions) \
+[Bitwise Expressions](../../expressions/operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions) \
+[Comparison Expressions](../../expressions/operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) \
 Type Cast Expressions \
 If Expressions \
 While Loops Expressions 
@@ -75,7 +77,9 @@ The type of a boolean literal is [bool](#bool).
 
 ### References
 [Bool Types](#bool) \
-Lazy Boolean Expressions \
+[Lazy Boolean Expressions](../../expressions/operator-expressions/lazy-boolean-expressions/lazy-boolean-expressions.md#lazy-boolean-expressions) \
+[Bitwise Expressions](../../expressions/operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions) \
+[Comparison Expressions](../../expressions/operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) \
 Type Cast Expressions \
 If Expressions \
 While Loops Expressions 

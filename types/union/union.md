@@ -46,8 +46,8 @@ where
 </pre>
 
 ### References
-[Field Access Expressions](#field-access) \
-[Struct Expressions](#struct-expression) \
+[Field Access Expressions](../../expressions/field-access-expressions/field-access-expressions.md#field-access-expressions) \
+[Struct Expressions](../../expressions/struct-expressions/struct-expressions.md#struct-expressions) \
 Generics \
 Unsafe \
 Weak keywords \
