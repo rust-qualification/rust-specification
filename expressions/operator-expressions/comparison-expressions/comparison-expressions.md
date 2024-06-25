@@ -47,7 +47,7 @@ Some specific comparison rules for different primitive types:
 - 2.4.3.6. <!-- 6a2df541-702c-45c2-9c93-e01610846161 --> `Numbers` are compared on their numerical values.
 - 2.4.3.7. <!-- ce008a05-6b67-4e02-85c6-38374ab3a561 --> `Bools` are compared based on the following [tables](#comparison-tables). 
 
-2.4.3.8. <!-- 40e36ca8-a41f-4093-a3c2-8ed49161d7f6 --> `Pointers` and `references` can also be compared, only using the equality and inequality expressions.
+2.4.3.8. <!-- 40e36ca8-a41f-4093-a3c2-8ed49161d7f6 --> `Pointers` and `references` can also be compared.
 
 2.4.3.9. <!-- 4eff8002-c02a-43d4-8773-ac28a98e0218 --> When chaining comparison operators, parentheses are required. For example, the expression a == b == c is invalid and should be written as (a == b) == c. 
 
