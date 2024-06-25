@@ -35,16 +35,16 @@ union MyUnion {
     f2: f32,
 }
 </pre>
-<pre>
-union GenericUnion<X, Y>
-where
-    X: Copy,
-    Y: Copy,
-{
-    x: X,
-    y: Y,
-}
-</pre>
+```
+    union GenericUnion<X, Y>
+    where
+        X: Copy,
+        Y: Copy,
+    {
+        x: X,
+        y: Y,
+    }
+```
 
 ### References
 [Field Access Expressions](../../expressions/field-access-expressions/field-access-expressions.md#field-access-expressions) \
