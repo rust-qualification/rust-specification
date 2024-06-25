@@ -28,9 +28,9 @@ The type of a boolean literal is [bool](../../types/bool/bool.md#bool).
 
 ### References
 [Bool Types](../../types/bool/bool.md#bool) \
-[Lazy Boolean Expressions](operator-expressions/lazy-boolean-expressions/lazy-boolean-expressions.md#lazy-boolean-expressions) \
-[Bitwise Expressions](operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions) \
-[Comparison Expressions](operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) \
+[Lazy Boolean Expressions](../operator-expressions/lazy-boolean-expressions/lazy-boolean-expressions.md#lazy-boolean-expressions) \
+[Bitwise Expressions](../operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions) \
+[Comparison Expressions](../operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) \
 Type Cast Expressions \
 If Expressions \
 While Loops Expressions 
