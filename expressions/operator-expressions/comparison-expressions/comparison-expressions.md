@@ -154,7 +154,7 @@ A bit expression computes a value by comparing two operands. These operands can 
 **2.4.3.12.** <!-- 4c3ff96c-5612-4e32-baf8-3b97aa49a52f --> ` a <= b is the same as a == b | a < b` 
 
 ### Runtime Semantics
-**2.4.3.13.** <!-- d6922c6a-99f3-4a86-880d-30ca8c6a6ffd --> The evaluation of an `equals` expression has the following steps:
+**2.4.3.13.** <!-- d6922c6a-99f3-4a86-880d-30ca8c6a6ffd --> The evaluation of an `equality` expression has the following steps:
 
 - The left operand is assessed.
 
