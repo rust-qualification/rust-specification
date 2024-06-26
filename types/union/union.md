@@ -36,14 +36,14 @@ union MyUnion {
 }
 </pre>
 ```
-    union GenericUnion<X, Y>
-    where
-        X: Copy,
-        Y: Copy,
-    {
-        x: X,
-        y: Y,
-    }
+union GenericUnion<X, Y>
+where
+    X: Copy,
+    Y: Copy,
+{
+    x: X,
+    y: Y,
+}
 ```
 
 ### References
