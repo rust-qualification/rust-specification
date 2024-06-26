@@ -49,20 +49,18 @@ A bit expression computes a value by comparing two operands. These operands can 
 
 **2.4.3.4.** Some specific comparison rules for different primitive types:
 - **2.4.3.4.1.** <!-- 17b4e671-32b1-4dea-bd1c-8692e6bc6eb9 --> `Chars` are compared lexicographically.
-- **2.4.3.4.2.** <!-- c0bf0f1e-01cf-4657-9261-fd2dd4fef6db --> `Strings` are compared lexicographically, character by character
+- **2.4.3.4.2.** <!-- c0bf0f1e-01cf-4657-9261-fd2dd4fef6db --> `Strings` are compared lexicographically, character by character.
 - **2.4.3.4.3.** <!-- 6a2df541-702c-45c2-9c93-e01610846161 --> `Numbers` are compared on their numerical values.
 - **2.4.3.4.4.** <!-- ce008a05-6b67-4e02-85c6-38374ab3a561 --> `Bools` are compared based on the following [tables](#comparison-tables). 
-
-**2.4.3.5.** <!-- 40e36ca8-a41f-4093-a3c2-8ed49161d7f6 --> `Pointers` and `references` can also be compared.
 
 **2.4.3.6.** <!-- 4eff8002-c02a-43d4-8773-ac28a98e0218 --> When chaining comparison operators, parentheses are required. For example, the expression a == b == c is invalid and should be written as (a == b) == c. 
 
 **2.4.3.7.** There are the following comparison expressions:
 
 **2.4.3.7.1.** `==` <!-- 04aa0dda-0706-44cb-9ab3-7945aeb58bb3 --> :
-- An `equals` expression checks equality.
-- The type of the left operand of an equals expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand shall be the trait implementation type parameter.
-- The value of an equals expression shall be the result of `core::cmp::PartialEq::eq(&left_operand, &right_operand)`.
+- An `equality` expression checks equality.
+- The type of the left operand of an equality expression shall implement the `core::cmp::PartialEq` trait and the type of the right operand shall be the trait implementation type parameter.
+- The value of an equality expression shall be the result of `core::cmp::PartialEq::eq(&left_operand, &right_operand)`.
 
 **2.4.3.7.2.** `>` <!-- 9289fb9d-67b5-4f30-bf22-2b9d646677aa --> :
 - A `greater-than` expression checks for a greater-than relationship.
