@@ -5,32 +5,41 @@
 ### Syntax
    <a name="bitwise-expression-syntax"></a>
 
-    BitExpression ::=
-        BitAndExpression
-      | BitOrExpression
-      | BitXOrExpression
-      | BitNotExpression
-      | ShiftLeftExpression
-      | ShiftRightExpression
+    BitwiseExpression ::=
+        BitwiseAndExpression
+      | BitwiseOrExpression
+      | BitwiseXOrExpression
+      | BitwiseNotExpression
+      | BitwiseShiftLeftExpression
+      | BitwiseShiftRightExpression
 
-    BitAndExpression ::=
+    BitwiseAndExpression ::=
         LeftOperand & RightOperand
 
-    BitOrExpression ::=
+    BitwiseOrExpression ::=
         LeftOperand | RightOperand
 
-    BitXorExpression ::=
+    BitwiseXorExpression ::=
         LeftOperand ^ RightOperand
 
-    BitNotExpression ::=
+    BitwiseNotExpression ::=
         ! Operand
 
-    ShiftLeftExpression ::=
+    BitwiseShiftLeftExpression ::=
         LeftOperand << RightOperand
 
-    ShiftRightExpression ::=
+    BitwiseShiftRightExpression ::=
         LeftOperand >> RightOperand
 
+    LeftOperand ::=
+        Expression
+
+    RightOperand ::=
+        Expression
+
+    Operand ::=
+        Expression
+        
 ### Description
 A bit expression computes a value by performing bit arithmetic operations on two operands.
 
@@ -213,18 +222,18 @@ There are the following comparison expressions:
 
 ### Examples
 ```
-    0b1010 & 0b1100
-    0b1010 | 0b0011
-    1 ^ 0
-    true & false
-    true | false
-    true ^ false
-    !false
-    10 << 2
-    -10 >> 2
+0b1010 & 0b1100
+0b1010 | 0b0011
+1 ^ 0
+true & false
+true | false
+true ^ false
+!false
+10 << 2
+-10 >> 2
 ```
 ### References
 [Bool Types](../../../types/bool/bool.md#bool) \
-[Boolean Literal Expressions](../../../types/bool/bool.md#boolean-literal) 
+[Boolean Literal Expressions](../../boolean-literal-expressions/boolean-literal-expressions.md#boolean-literal) \
 If Expressions \
 While Loops Expressions 

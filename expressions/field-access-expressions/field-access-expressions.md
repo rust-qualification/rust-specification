@@ -57,17 +57,17 @@ Reading a selected field of a [union type](../../types/union/union.md#union), wh
     ("hi", 14, false).1 // accessing the second tuple field
 `
 ```
-    union MyUnion {
-        integer: i32,
-        float: f32,
-    }
+union MyUnion {
+    integer: i32,
+    float: f32,
+}
 
-    fn main() {
-        unsafe {
-            let mut my_union = MyUnion { integer: 5 };
-            let float = my_union.float; // undefined behavior
-        }
+fn main() {
+    unsafe {
+        let mut my_union = MyUnion { integer: 5 };
+        let float = my_union.float; // undefined behavior
     }
+}
 ```
 
 ### References

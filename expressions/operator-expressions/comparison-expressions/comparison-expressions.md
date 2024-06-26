@@ -6,14 +6,14 @@
    <a name="comparison-expression-syntax"></a>
 
     ComparisonExpression ::=
-        EqualsExpression
+        EqualityExpression
       | GreaterThanExpression
       | GreaterThanOrEqualsExpression
       | LessThanExpression
       | LessThanOrEqualsExpression
-      | NotEqualsExpression
+      | InequalityExpression
 
-    EqualsExpression ::=
+    EqualityExpression ::=
         LeftOperand == RightOperand
 
     GreaterThanExpression ::=
@@ -28,8 +28,14 @@
     LessThanOrEqualsExpression ::=
         LeftOperand <= RightOperand
 
-    NotEqualsExpression ::=
+    InequalityExpression ::=
         LeftOperand != RightOperand
+
+    LeftOperand ::=
+        Expression
+
+    RightOperand ::=
+        Expression
 
 ### Description
 A bit expression computes a value by comparing two operands. These operands can be of primitive types or other standard library types and data structures such as tuples, structs, arrays, and vectors.
@@ -208,12 +214,12 @@ There are the following comparison expressions:
  
 ### Examples
 ```
-    2 == 2
-    3 > 2
-    3 >= 2
-    1 < 2
-    1 <= 1
-    1 != 1
+2 == 2
+3 > 2
+3 >= 2
+1 < 2
+1 <= 1
+1 != 1
 ```
 
 ### References

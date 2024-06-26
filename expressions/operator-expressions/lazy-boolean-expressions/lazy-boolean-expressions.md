@@ -15,6 +15,11 @@
     LazyOrExpression ::= 
         LeftOperand || RightOperand
 
+    LeftOperand ::=
+        Expression
+
+    RightOperand ::=
+        Expression
 
 ### Description
 A lazy boolean expression performs short-circuit Boolean arithmetic. 
