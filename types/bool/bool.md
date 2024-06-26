@@ -2,7 +2,7 @@
 ## 1.1. Bool Types <a name="bool"></a>
 ### Description
 
-The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values can be used in `conditionals`, `while` expressions and `boolean operations`.
+The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values can be used in `conditionals`, `while expressions` and `boolean operations`.
 
 ### Legality Rules
 1.1.1. <!-- ee7018f0-eca6-4ec1-b645-ffb98940f3ac --> There are two boolean values, `true` and `false`. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.  
@@ -12,10 +12,10 @@ The boolean type, or bool, is a basic data type that appears in the `language pr
 It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. 
 
 ### Examples
-`
+```
   let x: bool = false;  // explicit type declaration
   let y = true;
-`
+```
 ```
   if x & y {
     println!("they are both true");
@@ -29,8 +29,8 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
   }
 ```
 ```
-  let byte_pattern: u8 = 0x02;
-  let invalid_bool: bool = unsafe { mem::transmute(byte_pattern) };
+  let invalid_pattern: u8 = 0x02;
+  let invalid_bool: bool = unsafe { mem::transmute(invalid_pattern) };
   if invalid_bool {
     println!("This 'if' causes undefined behavior");
   } 
