@@ -2,7 +2,7 @@
 ## 1.1. Bool Types <a name="bool"></a>
 ### Description
 
-The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values can be used in `conditionals`, `while expressions` and `boolean operations`.
+The boolean type, or bool, is a basic data type that appears in the `language prelude` and represents truth values in logic and Boolean algebra. Boolean values can be used in `conditionals`, `while expressions`, [comparison expressions](../../expressions/operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) and [bitwise expressions](../../expressions/operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions).
 
 ### Legality Rules
 1.1.1. <!-- ee7018f0-eca6-4ec1-b645-ffb98940f3ac --> There are two boolean values, `true` and `false`. The boolean value `false` has a bit pattern of `0x00`, while `true` has a bit pattern of `0x01`.  
@@ -44,4 +44,3 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
 Type Cast Expressions \
 If Expressions \
 While Loops Expressions 
-
