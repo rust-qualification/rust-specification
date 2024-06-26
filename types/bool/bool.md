@@ -37,7 +37,7 @@ It is undefined behavior for a boolean variable to have any bit pattern other th
 ```
 
 ### References
-[Boolean Literal Expressions](#boolean-literal) \
+[Boolean Literal Expressions](../../expressions/boolean-literal-expressions/boolean-literal-expressions.md#boolean-literal) \
 [Lazy Boolean Expressions](../../expressions/operator-expressions/lazy-boolean-expressions/lazy-boolean-expressions.md#lazy-boolean-expressions) \
 [Bitwise Expressions](../../expressions/operator-expressions/bitwise-expressions/bitwise-expressions.md#bitwise-expressions) \
 [Comparison Expressions](../../expressions/operator-expressions/comparison-expressions/comparison-expressions.md#comparison-expressions) \
