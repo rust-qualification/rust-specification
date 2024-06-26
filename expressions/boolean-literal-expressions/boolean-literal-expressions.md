@@ -15,7 +15,7 @@
 A boolean literal represents the truth values in logic and Boolean algebra.
 
 ### Legality Rules
-2.1.1.1. <!-- 4980f9e0-3291-41ac-bef8-21acdf3545ba --> 
+**2.1.1.1.** <!-- 4980f9e0-3291-41ac-bef8-21acdf3545ba --> 
 The type of a boolean literal is [bool](../../types/bool/bool.md#bool).
 
 ### Examples
