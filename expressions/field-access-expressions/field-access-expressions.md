@@ -42,9 +42,9 @@ A field is accessed to be read or written.
 **2.2.8.** <!-- e35147ab-017e-454f-b748-6b78f8c5063b --> Evaluating a field access expression involves evaluating its container operand.
 
 ### Undefined Behavior
-Reading a selected field of a [union type](../../types/union/union.md#union), when the [union](../../types/union/union.md#union) contains data that is invalid for that field's type, results in undefined behavior.
+Reading a selected field of a [union type](../../types/union/union.md#union), when the [union](../../types/union/union.md#union) contains data that is invalid for that field's type, results in undefined behavior. To avoid this, always access the field that was last written to (see the [examples](#examples)).
 
-### Examples
+### Examples <a name="examples"></a>
 `
     let f = unsafe { myUnion.myField }; // accessing a union field with name myField
 ` \

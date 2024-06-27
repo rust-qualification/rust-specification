@@ -9,9 +9,9 @@ The boolean type, or bool, is a basic data type that appears in the `language pr
 **1.1.2.** <!-- 415bc9ad-19fb-4b7f-9423-8656c289a6ab --> The size and alignment of a bool are both 1 byte. 
 
 ### Undefined Behavior
-It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. 
+It is undefined behavior for a boolean variable to have any bit pattern other than `0x00` or `0x01`. To avoid this, only assign these two values to a bool and avoid converting other types to bool (see the [examples](#examples)).
 
-### Examples
+### Examples <a name="examples"></a>
 ```
   let x: bool = false;  // explicit type declaration
   let y = true;
