@@ -41,11 +41,11 @@
         Expression
         
 ### Description
-A bit expression computes a value by performing bit arithmetic operations on two operands.
+A bitwise expression computes a value by performing bitwise arithmetic operations on two operands.
 
 ### Legality Rules
 
-**2.4.2.1.** <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bit expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
+**2.4.2.1.** <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bitwise expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
 
 **2.4.2.2.** <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Except for shift left and right expressions, which are not used with values of [bool](../../../types/bool/bool.md#bool) type.
 
@@ -55,50 +55,50 @@ A bit expression computes a value by performing bit arithmetic operations on two
 
 
 **2.4.2.3.1.** <!-- ba09332a-f44d-46e7-9dd2-38885daa3435 --> `BitAnd`:
-- A bit AND expression performs bit OR arithmetic.
+- A bitwise AND expression performs bitwise OR arithmetic.
 
-- The type of the left operand of a bit and expression shall implement the `core::ops::BitAnd` trait and the type of the right operand shall be the trait implementation type parameter.
+- The type of the left operand of a bitwise and expression shall implement the `core::ops::BitAnd` trait and the type of the right operand shall be the trait implementation type parameter.
 
-- The type of a bit AND expression shall be `core::ops::BitAnd::Output`.
+- The type of a bitwise AND expression shall be `core::ops::BitAnd::Output`.
 
-- The value of a bit AND expression shall be the result of `core::ops::BitAnd::bitand(left_operand, right_operand)`.
+- The value of a bitwise AND expression shall be the result of `core::ops::BitAnd::bitand(left_operand, right_operand)`.
 
 
 **2.4.2.3.2.** <!-- 071612e5-2ff0-4fe2-827b-a2eb4dbd3aaf --> `BitOr`:
-- A bit OR expression performs bit OR arithmetic.
+- A bitwise OR expression performs bitwise OR arithmetic.
 
-- The type of the left operand of a bit or expression shall implement the `core::ops::BitOr` trait and the type of the right operand shall be the trait implementation type parameter.
+- The type of the left operand of a bitwise or expression shall implement the `core::ops::BitOr` trait and the type of the right operand shall be the trait implementation type parameter.
 
-- The type of a bit OR expression shall be `core::ops::BitOr::Output`.
+- The type of a bitwise OR expression shall be `core::ops::BitOr::Output`.
 
-- The value of a bit OR expression shall be the result of `core::ops::BitOr::bitor(left_operand, right_operand)`.
+- The value of a bitwise OR expression shall be the result of `core::ops::BitOr::bitor(left_operand, right_operand)`.
 
 
 
 **2.4.2.3.3.** <!-- e74c08ba-07fe-4c10-b68e-1028b289ea77 --> `BitXor`: 
-- A bit XOR expression performs bit exclusive OR arithmetic.
+- A bitwise XOR expression performs bitwise exclusive OR arithmetic.
 
-- The type of the left operand of a bit xor expression shall implement the `core::ops::BitXor` trait and the type of the right operand shall be the trait implementation type parameter.
+- The type of the left operand of a bitwise xor expression shall implement the `core::ops::BitXor` trait and the type of the right operand shall be the trait implementation type parameter.
 
-- The type of a bit XOR expression shall be `core::ops::BitXor::Output`.
+- The type of a bitwise XOR expression shall be `core::ops::BitXor::Output`.
 
-- The value of a bit XOR expression shall be the result of `core::ops::BitXor::bitxor(left_operand, right_operand)`.
+- The value of a bitwise XOR expression shall be the result of `core::ops::BitXor::bitxor(left_operand, right_operand)`.
 
 
 
 **2.4.2.3.4.** <!-- 4be64039-f32e-4940-bd34-05226e987c3b --> `BitNot`: 
 - A negation expression performs negation to its operand.
 
-- The type of the operand of a bit negation expression shall implement the `core::ops::Not` trait.
+- The type of the operand of a bitwise negation expression shall implement the `core::ops::Not` trait.
 
-- The type of a bit negation expression shall be `core::ops::Not::Output`.
+- The type of a bitwise negation expression shall be `core::ops::Not::Output`.
 
-- The value of a bit negation expression shall be the result of `core::ops::Not::not(operand)`.
+- The value of a bitwise negation expression shall be the result of `core::ops::Not::not(operand)`.
 
 
 
 **2.4.2.3.5.** <!-- e2dcd73e-8e58-4302-ad00-a0443924c533 --> `Shift left expression`: 
-- A shift left expression performs bit shift left arithmetic.
+- A shift left expression performs bitwise shift left arithmetic.
 
 - The type of the left operand of a shift left expression shall implement the `core::ops::Shl` trait and the type of the right operand shall be the trait implementation type parameter.
 
@@ -109,7 +109,7 @@ A bit expression computes a value by performing bit arithmetic operations on two
 
 
 **2.4.2.3.6.** <!-- 8ef4930a-5429-45cc-bbe1-1e651b203d39 --> `Shift right expression`: 
-- A shift right expression performs bit shift right arithmetic.
+- A shift right expression performs bitwise shift right arithmetic.
 
 - The type of the left operand of a shift right expression shall implement the `core::ops::Shr` trait and the type of the right operand shall be the trait implementation type parameter.
 
@@ -159,7 +159,7 @@ A bit expression computes a value by performing bit arithmetic operations on two
 | false | false | false  |
 
 ### Runtime Semantics
-**2.4.2.5.** <!-- 544fd80d-8fa9-43bf-b728-dcfa7d4ce16d --> The evaluation of a bit and expression has the following steps:
+**2.4.2.5.** <!-- 544fd80d-8fa9-43bf-b728-dcfa7d4ce16d --> The evaluation of a bitwise and expression has the following steps:
 
 - The left operand is assessed.
 
@@ -169,7 +169,7 @@ A bit expression computes a value by performing bit arithmetic operations on two
 
 
 
-**2.4.2.6.** <!-- 655da84b-0292-4b89-b976-83c49f762828 --> The evaluation of a bit or expression has the following steps:
+**2.4.2.6.** <!-- 655da84b-0292-4b89-b976-83c49f762828 --> The evaluation of a bitwise or expression has the following steps:
 
 - The left operand is assessed.
 
@@ -179,7 +179,7 @@ A bit expression computes a value by performing bit arithmetic operations on two
 
 
 
-**2.4.2.7.** <!-- 98d30a3d-3f93-4012-afca-19117782571c --> The evaluation of a bit xor expression has the following steps:
+**2.4.2.7.** <!-- 98d30a3d-3f93-4012-afca-19117782571c --> The evaluation of a bitwise xor expression has the following steps:
 
 - The left operand is assessed.
 
