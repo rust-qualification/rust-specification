@@ -45,16 +45,19 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 ### Legality Rules
 
-**2.4.2.1.** <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bitwise expressions are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
+**2.4.2.1.** <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bitwise AND, OR, XOR and NOT are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
 
-**2.4.2.2.** <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Except for shift left and right expressions, which are not used with values of [bool](../../../types/bool/bool.md#bool) type.
+**2.4.2.2.** <!-- 63e0629e-2e63-405d-bd20-a2feebb64921 --> Both operands in bitwise AND, OR, XOR and NOT should be of the same type, even within the same category of integers.
+
+**2.4.2.3.** <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Bitwise shift left and right expressions are used only with `integer` values.
+
+**2.4.2.4.** <!-- cf9bcde7-2f46-43cf-bbe2-fcb93d843c2d --> Bitwise shift left and right expressions can be used with different types of `integer` values.
 
 
+**2.4.2.5.** There are the following bitwise expressions:
 
-**2.4.2.3.** There are the following bitwise expressions:
 
-
-**2.4.2.3.1.** <!-- ba09332a-f44d-46e7-9dd2-38885daa3435 --> `BitAnd`:
+**2.4.2.5.1.** <!-- ba09332a-f44d-46e7-9dd2-38885daa3435 --> `BitAnd`:
 - A bitwise AND expression performs bitwise OR arithmetic.
 
 - The type of the left operand of a bitwise and expression shall implement the `core::ops::BitAnd` trait and the type of the right operand shall be the trait implementation type parameter.
@@ -64,7 +67,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 - The value of a bitwise AND expression shall be the result of `core::ops::BitAnd::bitand(left_operand, right_operand)`.
 
 
-**2.4.2.3.2.** <!-- 071612e5-2ff0-4fe2-827b-a2eb4dbd3aaf --> `BitOr`:
+**2.4.2.5.2.** <!-- 071612e5-2ff0-4fe2-827b-a2eb4dbd3aaf --> `BitOr`:
 - A bitwise OR expression performs bitwise OR arithmetic.
 
 - The type of the left operand of a bitwise or expression shall implement the `core::ops::BitOr` trait and the type of the right operand shall be the trait implementation type parameter.
@@ -75,7 +78,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 
 
-**2.4.2.3.3.** <!-- e74c08ba-07fe-4c10-b68e-1028b289ea77 --> `BitXor`: 
+**2.4.2.5.3.** <!-- e74c08ba-07fe-4c10-b68e-1028b289ea77 --> `BitXor`: 
 - A bitwise XOR expression performs bitwise exclusive OR arithmetic.
 
 - The type of the left operand of a bitwise xor expression shall implement the `core::ops::BitXor` trait and the type of the right operand shall be the trait implementation type parameter.
@@ -86,7 +89,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 
 
-**2.4.2.3.4.** <!-- 4be64039-f32e-4940-bd34-05226e987c3b --> `BitNot`: 
+**2.4.2.5.4.** <!-- 4be64039-f32e-4940-bd34-05226e987c3b --> `BitNot`: 
 - A negation expression performs negation to its operand.
 
 - The type of the operand of a bitwise negation expression shall implement the `core::ops::Not` trait.
@@ -97,7 +100,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 
 
-**2.4.2.3.5.** <!-- e2dcd73e-8e58-4302-ad00-a0443924c533 --> `Shift left expression`: 
+**2.4.2.5.5.** <!-- e2dcd73e-8e58-4302-ad00-a0443924c533 --> `Shift left expression`: 
 - A shift left expression performs bitwise shift left arithmetic.
 
 - The type of the left operand of a shift left expression shall implement the `core::ops::Shl` trait and the type of the right operand shall be the trait implementation type parameter.
@@ -108,7 +111,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 
 
-**2.4.2.3.6.** <!-- 8ef4930a-5429-45cc-bbe1-1e651b203d39 --> `Shift right expression`: 
+**2.4.2.5.6.** <!-- 8ef4930a-5429-45cc-bbe1-1e651b203d39 --> `Shift right expression`: 
 - A shift right expression performs bitwise shift right arithmetic.
 
 - The type of the left operand of a shift right expression shall implement the `core::ops::Shr` trait and the type of the right operand shall be the trait implementation type parameter.
@@ -119,7 +122,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 
 
-**2.4.2.4.** <!-- 1b093a78-f66d-4803-988c-d30851762abb --> The following operations are defined for [bool](../../../types/bool/bool.md#bool): <a name="bitwise-tables"></a>
+**2.4.2.6.** <!-- 1b093a78-f66d-4803-988c-d30851762abb --> The following operations are defined for [bool](../../../types/bool/bool.md#bool): <a name="bitwise-tables"></a>
 
 
 ### Bitwise NOT 
