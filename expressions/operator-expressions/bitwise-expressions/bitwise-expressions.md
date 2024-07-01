@@ -47,7 +47,7 @@ A bitwise expression computes a value by performing bitwise arithmetic operation
 
 **2.4.2.1.** <!-- 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688 --> Bitwise AND, OR, XOR and NOT are used with `integer` and [boolean](../../../types/bool/bool.md#bool) values.
 
-**2.4.2.2.** <!-- 63e0629e-2e63-405d-bd20-a2feebb64921 --> Both operands in bitwise AND, OR, XOR and NOT should be of the same type, even within the same category of integers.
+**2.4.2.2.** <!-- 63e0629e-2e63-405d-bd20-a2feebb64921 --> Both operands in bitwise AND, OR, XOR and NOT shall be of the same type, even within the same category of integers.
 
 **2.4.2.3.** <!-- d7a0044c-a6c7-4a18-8b26-d6f3ff619e7b --> Bitwise shift left and right expressions are used only with `integer` values.
 
