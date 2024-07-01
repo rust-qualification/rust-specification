@@ -45,7 +45,7 @@ A bit expression computes a value by comparing two operands. These operands can 
 
 **2.4.3.2.** <!-- 915004e3-13c5-445a-9159-f29f39b65362 --> The type of a comparison expression is of type [bool](../../../types/bool/bool.md#bool).
 
-**2.4.3.3.** <!-- 99af6d58-c504-41dd-a325-9341bd0ae9a8 --> Both operands in these expressions should be of the same type, even within the same category of integers. 
+**2.4.3.3.** <!-- 99af6d58-c504-41dd-a325-9341bd0ae9a8 --> Both operands in these expressions shall be of the same type, even within the same category of integers. 
 
 **2.4.3.4.** Some specific comparison rules for different primitive types:
 - **2.4.3.4.1.** <!-- 17b4e671-32b1-4dea-bd1c-8692e6bc6eb9 --> `Chars` are compared lexicographically.
@@ -53,7 +53,7 @@ A bit expression computes a value by comparing two operands. These operands can 
 - **2.4.3.4.3.** <!-- 6a2df541-702c-45c2-9c93-e01610846161 --> `Numbers` are compared on their numerical values.
 - **2.4.3.4.4.** <!-- ce008a05-6b67-4e02-85c6-38374ab3a561 --> `Bools` are compared based on the following [tables](#comparison-tables). 
 
-**2.4.3.6.** <!-- 4eff8002-c02a-43d4-8773-ac28a98e0218 --> When chaining comparison operators, parentheses are required. For example, the expression a == b == c is invalid and should be written as (a == b) == c. 
+**2.4.3.6.** <!-- 4eff8002-c02a-43d4-8773-ac28a98e0218 --> When chaining comparison operators, parentheses are required. For example, the expression a == b == c is invalid and shall be written as (a == b) == c. 
 
 **2.4.3.7.** There are the following comparison expressions:
 
